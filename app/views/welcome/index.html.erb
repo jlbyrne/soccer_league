@@ -1,0 +1,11 @@
+<h1>The Soccer League</h1>
+
+<p>Here are some past games for the league in a slightly human readable format:</p>
+
+<% @games.each do |game| %>
+	<h3><%= game.home_team.name %> vs. <%= game.away_team.name %></h3>
+	<p><%= game.home_team.name %>: <%= game.home_score %>, <%= game.away_team.name %>: <%= game.away_score %></p>
+<% end %>
+
+<p><button class="gimmie-json">Click me to see some json</button></p>
+<div class="json-container"></div>
